@@ -7,11 +7,11 @@ Based on the official [nginx](https://hub.docker.com/_/nginx) Docker image, this
 This is by no means a highly secure approach, it is rather meant to prevent unwanted routes to your content/services.
 
 In this image basically 3 files are added to the container:
-File|Description
-----|-----------
-/update-cloudflare-ips.sh|Script that fetches the current IP-ranges from Cloudflare
-/etc/nginx/conf.d/cloudflare-realip.conf|Configuration block that will set the correct source IP of your visitor (e.g. for access logs)
-/etc/nginx/conf.d/cloudflare-geo.conf|Configuration block that sets a variable to then conditionally allow/block access (see below)
+File | Description
+---- | -----------
+/update-cloudflare-ips.sh | Script that fetches the current IP-ranges from Cloudflare
+/etc/nginx/conf.d/cloudflare-realip.conf | Configuration block that will set the correct source IP of your visitor (e.g. for access logs)
+/etc/nginx/conf.d/cloudflare-geo.conf | Configuration block that sets a variable to then conditionally allow/block access (see below)
 
 Block or grant access
 ---
